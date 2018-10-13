@@ -1,0 +1,89 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "varian-hacker-news"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css",
+        "assets/css/bootstrap.css",
+        "assets/css/swatches-and-photos.css",
+        "assets/css/prettyPhoto.css",
+        "assets/css/jquery.selectBox.css",
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "assets/css/elegant-icon.css",
+        "assets/css/style.css",        
+        "assets/css/commerce.css",        
+        "assets/css/custom.css",        
+        "assets/css/magnific-popup.css"  
+      ],
+      "scripts": [
+        "assets/js/jquery.js",
+        "assets/js/jquery-migrate.min.js",
+        "assets/js/easing.min.js",
+        "assets/js/imagesloaded.pkgd.min.js",
+        "assets/js/bootstrap.min.js",
+        "assets/js/superfish-1.7.4.min.js",
+        "assets/js/jquery.appear.min.js",
+        "assets/js/script.js",
+        "assets/js/swatches-and-photos.js",
+        "assets/js/jquery.cookie.min.js",
+        "assets/js/jquery.prettyPhoto.js",
+        "assets/js/jquery.prettyPhoto.init.min.js",
+        "assets/js/jquery.selectBox.min.js",
+        "assets/js/jquery.touchSwipe.min.js",
+        "assets/js/jquery.transit.min.js",
+        "assets/js/jquery.carouFredSel.js",
+        "assets/js/isotope.pkgd.min.js",
+        "assets/js/waypoints.min.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}
