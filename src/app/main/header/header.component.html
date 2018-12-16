@@ -1,0 +1,40 @@
+<header class="header-container header-type-toggle-offcanvas header-navbar-toggle-offcanvas">
+  <div class="navbar-container">
+    <div class="navbar navbar-default navbar-scroll-fixed">
+      <div class="navbar-default-wrap container">
+        <div class="navbar-toggle-right">
+          <div class="navbar-toggle-search">
+            <div class="navbar-search">
+              <a class="navbar-search-button">
+                    <span>Search Title</span>
+                  <i class="fa fa-search"> </i>
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./">
+              <img class="logo" alt="vivriticapital" src="assets/images/logo/varian-logo.png">
+              <img class="logo-fixed" alt="vivriticapital" src="assets/images/logo/varian-logo.png">
+              <img class="logo-mobile" alt="vivriticapital" src="assets/images/logo/varian-logo.png">
+            </a>
+        </div>
+      </div>
+      <div class="header-search-overlay hide">
+        <div class="container">
+          <div class="header-search-overlay-wrap">
+            <form class="searchform">
+              <input type="text" class="searchinput" name="s" [(ngModel)]="searchText" (change)="SearchItem()" autocomplete="off" value=""
+                placeholder="Search..." />
+              <input type="submit" class="searchsubmit hidden" name="submit" value="Search" />
+            </form>
+            <button type="button" class="close" (click)='CloseSearch()'>
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+              </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

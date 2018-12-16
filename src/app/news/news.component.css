@@ -1,0 +1,24 @@
+.new-Border{
+    padding: 0.5714285714285714em;
+    border: 1px solid #e5e5e5;
+}
+
+.entry-title{
+    font-size: 1.0em;
+}
+
+.onItemChecked{
+    color: #08c;
+    text-decoration: none;
+}
+
+.filterItemList{
+    display: inline-flex;
+}
+
+.hentry-wrap{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}

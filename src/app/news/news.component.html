@@ -1,0 +1,100 @@
+<div class="content-container commerce page-layout-left-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 main-wrap">
+                <div class="shop-toolbar">
+                    <form class="commerce-ordering clearfix">
+                        <div class="commerce-ordering-select">
+                            <label class="hide">Sorting:</label>
+                            <div class="form-flat-select">
+                                <select name="orderby" class="orderby" (change)="FilterItemsDateChange($event)">
+                                            <option value="-1" selected="selected">Sort By Created Date</option>
+                                            <option value="asc">Sort by Created Date: low to high</option>
+                                            <option value="des">Sort by Created Date: high to low</option>
+                                </select>
+                                <i class="fa fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="commerce-ordering-select">
+                            <label class="hide">Show:</label>
+                            <div class="form-flat-select">
+                                <select name="orderby" class="per_page" (change)="FilterItemsPointsChange($event)">
+                                        <option value="-1" selected="selected">Sort By Points</option>
+                                        <option value="asc">Sort By Points: low to high</option>
+                                        <option value="des">Sort By Points: high to low</option>
+                                        </select>
+                                <i class="fa fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="main-content">
+
+                    <div class="posts masonry">
+                        <div class="posts-wrap masonry-wrap posts-layout-masonry row">
+                            <article *ngFor="let ninfo of newsInfo;" class="masonry-item col-md-6 col-sm-6 hentry ">
+                                <div class="hentry-wrap">
+                                    <div class="entry-info">
+                                        <!-- {{  ninfo.Title?.substring(0,30) + '...' }} -->
+                                        <div class="entry-header">
+                                            <h6 class="entry-title">
+                                                <a href="{{ ninfo.URL }}" data-toggle="tooltip" data-placement="top" title="{{ ninfo.Title }}}" target="_blank">{{  ninfo.Title?.substring(0,30) + '...' }} </a>
+                                            </h6>
+                                        </div>
+                                        <div class="entry-meta icon-meta">
+                                            <span class="onsale" style="margin-right: -10px;">Points: {{  ninfo.NumberPoints }}</span>
+                                            <span class="meta-date">
+                                                        Date: 
+                                                        <time datetime="2015-08-11T06:27:49+00:00">
+                                                            {{ ninfo.CreatedDate }}
+                                                        </time>
+                                                    </span>
+                                            <span class="meta-author">
+                                                        Author: 
+                                                        <a href="#">{{ ninfo.Author?.toUpperCase() }}</a>
+                                                    </span>
+                                            <!-- <span class="meta-author">
+                                                            Points: 
+                                                            <a href="#">{{ ninfo.NumberPoints }}</a>
+                                                    </span> -->
+                                            <span class="meta-author">
+                                                            Comments: 
+                                                            <a href="#">{{ ninfo.NumberComments }}</a>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 sidebar-wrap">
+                <div class="main-sidebar">
+                    <div class="widget widget_layered_nav">
+                        <h4 class="widget-title">
+                            <span>Filter By Author</span>
+                        </h4>
+                        <ul>
+                            <li *ngFor="let filterAuthor of filterAuthors; let i = index">
+                                <div class="checkbox checkbox-primary">
+                                    <input [attr.id]="'checkbox' + i" type="checkbox" (click)="FilterOnItemAddedAuther($event,filterAuthor)">
+                                    <label [attr.for]="'checkbox' + i" type="checkbox">
+                                            {{ filterAuthor?.toUpperCase() }}
+                                    </label>
+                                </div>
+                                <!-- <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" (click)="FilterOnItemAddedAuther($event,filterAuthor)">
+                                        {{ filterAuthor?.toUpperCase() }}
+                                    </label>>11</small> 
+                                </div> -->
+                                <!-- <span class="count">(1)</span> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
